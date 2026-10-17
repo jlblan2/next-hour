@@ -1,4 +1,4 @@
-// Passage weather grids for the app's map: NOAA (GFS + GFS-Wave) files written by
+// Sailing weather grids for the app's map: NOAA (GFS + GFS-Wave) files written by
 // passage/fetch_gfs.py, and the Navy run (NAVGEM + WAVEWATCH III) re-cut on request
 // to the same region and variable layout.
 import fs from 'node:fs';

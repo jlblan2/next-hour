@@ -1,4 +1,4 @@
-// Measured water levels at every Atlantic-side NOAA gauge, for the Passage weather map.
+// Measured water levels at every Atlantic-side NOAA gauge, for the Sailing weather map.
 // NOAA has no bulk feed and its API gateway blocks bursts (a few hundred requests in a few
 // minutes earned a temporary 403), so this sweeps gently: one small "latest" request per
 // gauge, 3 s apart, every 30 minutes. Predictions are refreshed twice a day and flood

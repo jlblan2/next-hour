@@ -1,6 +1,6 @@
 import { loadBuoys, fmtTemp, cToF } from './seatemp.js';
 
-// Passage weather: PassageWeather-style forecast maps for the US East Coast, the Gulf
+// Sailing weather: forecast maps for the US East Coast, the Gulf
 // of America, the Bahamas, the Caribbean and Bermuda. Wind (speed colours + barbs in knots), waves (height + direction), pressure
 // (isobars + rain) and visibility, 3-hourly over 7 days, from NOAA GFS / GFS-Wave or the
 // Navy's NAVGEM / WAVEWATCH III, served as compact grids by the alert server.
@@ -473,7 +473,7 @@ async function start() {
   if (inited) return;
   inited = true;
   const server = opts.server();
-  if (!server) { $('pwInfo').textContent = 'Passage weather needs the alert server.'; return; }
+  if (!server) { $('pwInfo').textContent = 'Sailing weather needs the alert server.'; return; }
   map = L.map('pwMap', { zoomControl: true, attributionControl: true, minZoom: 3 });
   L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
     maxZoom: 12, attribution: 'Basemap &copy; Esri',
@@ -503,7 +503,7 @@ async function start() {
     const r = await fetch(`${server}/api/passage/meta`);
     meta = await r.json();
   } catch (e) {
-    $('pwInfo').textContent = `Passage weather unavailable: ${e.message}`;
+    $('pwInfo').textContent = `Sailing weather unavailable: ${e.message}`;
     return;
   }
   if (!meta[model]) model = meta.noaa ? 'noaa' : 'navy';

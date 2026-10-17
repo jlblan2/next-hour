@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""NOAA GFS + GFS-Wave for the Passage weather maps (US East Coast, Gulf of America,
+"""NOAA GFS + GFS-Wave for the Sailing weather maps (US East Coast, Gulf of America,
 Bahamas and Caribbean).
 
 Uses the NOMADS grib filter to download only the fields and area needed (8-47N,

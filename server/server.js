@@ -248,7 +248,7 @@ async function highWaterLoop() {
   setTimeout(highWaterLoop, HIGHWATER_CHECK_MS);
 }
 
-// Water levels at every gauge for the Passage weather map (a gentle 30-minute sweep).
+// Water levels at every gauge for the Sailing weather map (a gentle 30-minute sweep).
 const WATERLEVEL_SWEEP_MS = 30 * 60000;
 initWaterLevels(DATA_DIR);
 
@@ -361,7 +361,7 @@ const routes = {
   // Latest measured water level at every Atlantic-side gauge.
   'GET /api/waterlevels': async () => waterLevelSnapshot(),
 
-  // Passage weather maps: which NOAA and Navy runs are available.
+  // Sailing weather maps: which NOAA and Navy runs are available.
   'GET /api/passage/meta': async () => passageMeta(PASSAGE_DIR, NAVY_DIR),
   'GET /api/navy/point': async (_, q) => navyPoint(NAVY_DIR, +q.get('lat'), +q.get('lon')),
 

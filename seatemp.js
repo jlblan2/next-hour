@@ -7,7 +7,7 @@ let opts;
 let buoys = null;
 let token = 0;
 
-// The buoy set is shared with the Passage weather sea-temperature map.
+// The buoy set is shared with the Sailing weather sea-temperature map.
 export async function loadBuoys(server) {
   if (buoys && Date.now() - buoys.fetched < 10 * 60000) return buoys;
   const r = await fetch(`${server}/api/buoys`);
@@ -108,7 +108,7 @@ export async function showWaterTemp(loc) {
     ? `<table>${list.map((x) => buoyRow(x.b, loc, metric)).join('')}</table>`
     : '<p class="note">No buoy or station measuring water temperature within 250 nm.</p>';
   $('wtMeta').textContent = 'Measured by NOAA buoys and coastal stations (National Data Buoy Center), reports from the last 6 hours. ' +
-    'Sea surface forecast: Open-Meteo marine model. The Passage weather map has a sea-temperature chart too.';
+    'Sea surface forecast: Open-Meteo marine model. The Sailing weather map has a sea-temperature chart too.';
 }
 
 export function initWaterTemp(o) { opts = o; }

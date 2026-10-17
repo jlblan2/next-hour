@@ -220,7 +220,7 @@ footer { color: var(--muted); font-size: 11px; text-align: center; padding: 4px 
 .second .summary { margin: 0 0 8px; font-size: 14px; }
 .second .key { color: var(--muted); font-size: 11px; margin: 6px 0 0; }
 
-/* passage weather */
+/* sailing weather */
 .passage { padding: 14px 0 0; overflow: hidden; }
 .passage h2 { padding: 0 14px; }
 .pw-regions { display: flex; flex-wrap: wrap; gap: 6px; padding: 0 12px 8px; }

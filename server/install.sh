@@ -81,12 +81,12 @@ OnUnitActiveSec=1h
 WantedBy=timers.target
 EOF
 
-# Passage weather: NOAA GFS + GFS-Wave for the East Coast and Gulf (checks hourly).
+# Sailing weather: NOAA GFS + GFS-Wave for the East Coast and Gulf (checks hourly).
 mkdir -p "$DATA/passage"
 chown wxnow:wxnow "$DATA/passage"
 cat > /etc/systemd/system/wx-now-passage.service <<EOF
 [Unit]
-Description=Fetch NOAA GFS and GFS-Wave passage weather for Wx Now
+Description=Fetch NOAA GFS and GFS-Wave sailing weather for Wx Now
 After=network-online.target
 [Service]
 Type=oneshot
